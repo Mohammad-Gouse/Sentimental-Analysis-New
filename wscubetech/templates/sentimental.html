@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="sentimental">
+    <h1>Sentimental Analyis</h1>
+    <div class="box">
+        
+    </div>
+    <div class="formBox">
+        <form method="post">
+            {% csrf_token %}
+            <label for="">Review:</label><br>
+            <input type="text" name="review"><br>
+            <button type="submit">Check</button><br>
+            <input type="text" value="{{result}}" name="">
+        </form>
+    </div>
+    <h1>{{result}}</h1>
+</section>
+
+{% endblock%}
