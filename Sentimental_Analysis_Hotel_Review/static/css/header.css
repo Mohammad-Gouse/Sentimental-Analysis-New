@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+
+}
+:root{
+    --transition: all 0.7s ease;
+    --yellow: #f9d342;
+    --dark: #292826;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6{
+    padding: 8px 0;
+}
+img{
+    width: 100%;
+    display: block;
+}
+
+.header{
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    padding: 25px;
+    transition: var(--transition);
+    color: #fff;
+}
+.sticky{
+    background-color: #fff;
+    transition: var(--transition);
+    z-index: 12;
+    padding: 10px 100px;
+    width: 100%;
+    box-shadow: 12 10px 20px 0 rgba(0, 0, 0, 0.9), 0 12px 30px 0 rgba(0, 0, 0, 0.9);
+}
+.header span{
+    cursor: pointer;
+    letter-spacing: 2px;
+    font-weight: 900;
+    font-size: 40px;
+    transition: var(--transition);
+}
+
+.sticky span{
+ color: #111;   
+}
+
+.sticky .navbar li{
+    z-index: 15;
+}
+
+.sticky .navbar li a{
+    color: #111;
+}
+
+.navbar{
+    position: relative;
+    display: flex;
+    margin-top: 25px;
+}
+.navbar li{
+    list-style: none;
+    margin-left: 30px;
+}
+.navbar li a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.navbar li a:hover{
+    color: var(--yellow);
+    transition: var(--transition);
+}
+
+.navbar.active{
+    width: 100%;
+    height: calc(100% - 84px);
+    position: fixed;
+    top: 84px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+
+}
+
+.navbar.active li{
+    margin: 20px;
+}
+
+.navbar.active li a{
+    color: #111;
+    font-size: 20px;
+    z-index: 14;
+}
+.navbar.active li a:hover{
+    color: var(--yellow);
+    transition: var(--transition);
+}
+
+@media (max-width: 991px)
+{
+    .sticky{
+        padding: 10px 20px;
+    }
+
+    .navbar{
+        display: none;
+    }
+
+    .header{
+        padding: 10px 20px;
+    }
+    .menuToggle{
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background: url(/static/img/menu.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        transition: var(--transition);
+    }
+    .menuToggle.active{
+        background:url(/static/img/close.png);
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: var(--transition);
+    }
+
+    .sticky .menuToggle{
+        filter: invert(1);
+    }
+}

@@ -1,0 +1,21 @@
+h1{
+    text-align: center;
+    margin: 20px;
+}
+
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50vh;
+}
+
+form{
+    width: 50%;
+}
+
+input, select, button{
+    width: 100%;
+    height: 30px;
+}

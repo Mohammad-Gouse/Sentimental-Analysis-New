@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class = "banner">
+    {% if user.is_authenticated %}
+    <h1>Sentimental Analyis for Hotel Reviews</h1>
+    {% endif %}
+    <button><a href="sentiment">Try Review Analysis &#x2197;</a></button>
+</div>
+
+<div class="about">
+    <h1>What is sentiment analysis?</h1>
+    <p><b>Sentiment analysis (opinion mining) is a process of classifying the polarity of a statement. Depending on the text or phrases pertaining to specific emotions, there are positive, negative or neutral statements.</b> </p>
+    <p>Every review that guests post on any platform is considered for sentiment analysis. It assists in deriving the positives and negatives of any hotel.</p>
+    <p>Unlike NPS (Net Promoter Score) which uses ratings to assess any review, the sentiment analysis focuses on their content. </p>
+    <p>With the assistance of machine-learning and deep-learning, the system is updated for various terminologies and phrases to classify the statements.</p>
+    <p>The initial three aspects use a certain algorithm to evaluate the hotel review dataset for sentiment analysis. Meanwhile, accuracy helps in gauging whether the analysed data is correct or not.</p>
+    <h1>What are the benefits of doing sentiment analysis for hotel reviews?</h1>
+    <p>Well, every industry is now adopting sentiment analysis to assess its reputation in the online market. The hospitality industry is following the same path with hotel reviews sentiment analysis.</p>
+    <p>Let’s find out about the benefits your hotel can derive from them.</p>
+    <h1>a. Gauging hotels reputation in the market</h1>
+    <p>One of the primary benefits of using sentiment analysis is knowing your hotel’s reputation. Most of the reputation management software uses a combination of NLP, NPS, and machine-learning to evaluate a hotel’s reputation.</p>
+    <p>The reviews from all the booking platforms you are listed on are collaborated to form a dataset. This data is then further narrowed down into three different sections using sentiment analysis as positive, negative, and neutral.</p>
+    <p>Once the data is sorted out, certain metrics are used to calculate the reputation score of the hotel. It is then compared to the scores of compset to determine your hotel’s value among your customers.</p>
+    <h1>b. Understanding a hotel’s flaws</h1>
+    <p>Every statement which falls into the negative category has a phrase associated with services that guests dislike. Let’s consider an example of a negative review:</p>
+    <div class="sample">
+        <p><i>"The hotel staff was quite rude to me when I complained about the unclean room being."</i></p>
+    </div>
+    <p>If we analyse this review, we can clearly understand that the guest is not happy with two things –
+        <ul>
+            <li>Staff’s behaviour</li>
+            <li>Dirty room</li>
+        </ul>
+    </p>
+    <p>So, the hotel can take corrective actions to ensure that other guests don’t face the same problem. Eventually, every review in which guests have maligned services of the property is a learning lesson.</p>
+    <h1>c. Analysing competitors</h1>
+    <p>You cannot get financial records of your compset for analysis. However, with the sentiment analysis of hotel reviews, you can assess their reputation in the market.</p>
+    <p>Many reputation management software has a feature of competitor analysis. Once you update your compset in the system, it fetches feedback from all the sources and gives you a hotel review analysis report. </p>
+    <p>This report consists of the praised and criticised aspects of all your competitors. You can utilise this report during SWOT analysis to understand the opportunities. </p>
+    <h1>d. Reviewing all data in a single go</h1>
+    <p>You need to have a large amount of hotel review dataset for sentiment analysis. As I said earlier, you can utilise feedback from multiple reviewing platforms. </p>
+    <p>It saves your time as well as effort, to look out on every review individually. Moreover, bulk analysis of feedback highlights your most critical and appraising factors.</p>
+    <h1>How does the sentiment analysis for hotel reviews work?</h1>
+    <p>Well, there are many techniques for sentiment analysis of hotel reviews. Yet, NLP (Natural Language Processing) remains the most used in all the reputation management software. </p>
+    <P>To describe briefly, NLP analyse the text or phrase used to define the quality of services mentioned by the guests in reviews. Based on the nature of the word, the feedback receives its classification. </P>
+    <p>The NLP based systems have keywords programmed in them to process the reviews. </p>
+    <p>Let’s consider the below example for better understanding:</p>
+    <div class="sample">
+        <p><i>“The hotel room was clean and well maintained.”</i></p>
+    </div>
+    <p>As we can read, this review highlights the good aspect of the room. Now terms such as clean room, fabulous location, nice ambiance, and similar define a positive review. Considering such terminologies, this falls into the positive category.</p>
+    <div class="sample">
+        <p><i>“The food served in the hotel was terrible.”</i></p>
+    </div>
+    <p>Looking at the statement above, we can gauge it as negative feedback. Why? Because it’s criticising the quality of the hotel’s food.  </p>
+    <p>Terms that show the poor aspects of hotels relate to negative feedback. It could be an unclean room, unpleasant ambiance, rude staff, and such likes.</p>
+    <p>With the use of machine learning, this database keeps on upgrading from time to time.</p>
+    <h1>What are the challenges faced during the sentiment analysis for hotel reviews?</h1>
+    <p>As they say – Every cloud has a silver lining.</p>
+    <p>Sentiment analysis definitely is one the best method to classify any review. However, it has its own set of limitations</p>
+    <p>Here are some of the common challenges faced by the hotels:</p>
+    <h1>a. Multilingual reviews are problematic</h1>
+    <p>Sentiment analysis has English as the primary language for reviews. In fact, the words programmed in the systems running on NLP are in English only. </p>
+    <p>It creates a barrier while analysing reviews that are in any other language. Although, with Google translation now being available on platforms, they are easier to read. Yet, Google translate is not 100% accurate. </p>
+    <p>If there is a slight change in meaning, it will cause multiple errors in the sentiment analysis.</p>
+    <h1>b. Tone of reviews</h1>
+    <p>NLP is a part of technology. It can’t understand the exact emotions behind the statement. Sometimes, the review has some sarcasm used to complain about the hotel. </p>
+    <p>However, the sentiment analysis considered the adjectives and adverbs to classify the review. Here’s a review with sarcasm for your reference:</p>
+    <div class="sample">
+        <p><i>"The hotel room was so neat and clean that it made me wonder why I forgot my broom at home."</i></p>
+    </div>
+    <p>As a person, I would read and understand the sarcasm behind it. But the software would pick up two main words from the review  – hotel room and clean.</p>
+    <p>Based on these two words, it would process the review and mark it as positive. I know, it sounds a bit stupid. But, it’s a technology and needs a rework in these areas.</p>
+    <h1>c. Incapable of analysing complex statements</h1>
+    <p>We have yet another drawback in the sentiment analysis of reviews. See, the system understands simple statement such as:</p>
+    <ol>
+        <li>We had a mesmerising experience.</li>
+        <li>The hotel staff was helpful.</li>
+        <li>The rooms were unclean.</li>
+        <li>The food at the restaurant was terrible. </li>
+    </ol>
+    <p>However, when it comes to analysing a complex statement, NLP lets us down. Let’s consider an example for better understanding:</p>
+    <div class="sample">
+        <p><i>"Even though there was a bit of noise due to the road's construction, we had a pretty good experience."</i></p>
+    </div>
+    <p>When you and I would read this statement, we know it’s a positive review. However, the sentiment analysis considers two different factors:</p>
+    <ol>
+        <li>Noise due to the road’s construction</li>
+        <li>Pretty good experience</li>
+    </ol>
+    <p>With both positive and negative points in a statement, it would classify it as a neutral review. This definitely can cause lots of errors. However with time, this issue will be resolved.</p>
+    <div class="conclusion">
+        <h1>Conclusion</h1>
+        <p>Sentiment analysis is one of the widely accepted methods to bifurcate reviews. It’s simple to use and can be easily configured from time to time. </p>
+        <p>However, the real challenge lies in understanding the complex emotions behind any statement. With time, we can look for an upgrade in this technology. </p>
+        <p>I am sure there would be a time when it would give 100% accurate results. Till then, I would recommend you to start the sentiment analysis of your hotel’s reviews and utilise the results to make your property better.</p>
+    </div>
+</div>
+
+
+{% endblock%}

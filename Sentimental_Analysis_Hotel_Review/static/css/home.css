@@ -1,0 +1,68 @@
+.banner{
+    background: linear-gradient(rgba(0, 0, 0, 9), rgba(0, 0, 0, 0.6)), url("/static/img/hotel2.jpg") center/cover no-repeat;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 40px;
+    height: auto;
+}
+
+.about p{
+    text-align:start;
+    margin: 5px;
+}
+
+h1{
+    margin-top: 10px;
+}
+
+.sample{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    height: 100px;
+    background-color: burlywood;
+    border: 2px solid #111;
+    border-radius: 10px;
+    position: relative;
+    margin: 10px;
+    font-size: 30px;
+    font-weight: 700;
+}
+.about ul{
+    position: relative;
+    left: 5%;
+}
+
+.banner button{
+    background: transparent;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+.banner button a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+.banner button:hover{
+    color: #fff;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5));
+    font-size: 20px;
+}
+.conclusion{
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
